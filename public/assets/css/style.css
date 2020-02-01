@@ -421,6 +421,42 @@ header {
       line-height: 1.5em;
       text-align: center; }
 
+/**
+* IPAD PRO
+*/
+@media screen and (min-width: 1024px) {
+  .mid .container {
+    flex-direction: row; }
+    .mid .container .cadeau-left,
+    .mid .container .cadeau-right {
+      flex-basis: 50%; }
+    .mid .container .cadeau-left {
+      padding-right: 1em; }
+    .mid .container .cadeau-right {
+      padding-left: 1em; }
+      .mid .container .cadeau-right .info {
+        margin: 0;
+        position: absolute;
+        top: 21%;
+        right: 17%; }
+      .mid .container .cadeau-right .green-block {
+        padding: 0.25em 1em 0.25em 0em;
+        text-align: end;
+        position: absolute;
+        bottom: 16%;
+        left: 11%; } }
+
+/**
+* DESKTOP
+*/
+@media screen and (min-width: 1500px) {
+  .mid .container .cadeau-right .green-block {
+    clip-path: polygon(100% 0%, 100% 100%, 13% 100%, 13% 55%, 0 55%, 0 0);
+    max-width: 68%; } }
+
+/**
+* RETINA
+*/
 #qcm {
   display: flex;
   flex-direction: column;
@@ -567,10 +603,14 @@ footer nav {
   flex-direction: column; }
   footer nav .left,
   footer nav .right {
-    background-color: #e5e5e5; }
+    align-items: center;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center; }
     footer nav .left a,
     footer nav .right a {
       color: #333333;
+      display: flex;
       font-weight: bold; }
   footer nav .left img {
     margin-right: 1em; }
@@ -581,5 +621,24 @@ footer nav {
     color: #666666;
     display: block;
     font-family: Lato;
-    padding: 1em;
+    padding: 1.3em;
     width: 100%; }
+
+/**
+* IPAD PRO
+*/
+@media screen and (min-width: 1024px) {
+  footer {
+    align-items: flex-end;
+    background-image: url(/assets/images/footer-foret.png);
+    background-position: bottom;
+    display: flex;
+    min-height: 152px; }
+    footer nav {
+      flex-direction: row; }
+      footer nav .center {
+        flex: auto; }
+        footer nav .center ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly; } }

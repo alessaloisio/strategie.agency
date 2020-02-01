@@ -40,10 +40,6 @@
       margin-bottom: 2em;
       margin-top: -3em;
 
-      // position: absolute;
-      // top: 21%;
-      // right: 17.5%;
-
       .info-container {
         position: relative;
         background: url(/assets/images/mid-bandeau-rectangle.svg) no-repeat;
@@ -98,14 +94,64 @@
       padding: 1em;
       line-height: 1.5em;
       text-align: center;
-
-      // padding: 0.25em 1em 0.25em 0em;
-      // clip-path: polygon(100% 0%, 100% 100%, 13% 100%, 13% 55%, 0 55%, 0 0);
-      // text-align: end;
-      // max-width: 60%;
-      // position: absolute;
-      // bottom: 18%;
-      // left: 8%;
     }
   }
 }
+
+/**
+* IPAD PRO
+*/
+@media screen and (min-width: 1024px) {
+  .mid {
+    .container {
+      flex-direction: row;
+
+      .cadeau-left,
+      .cadeau-right {
+        flex-basis: 50%;
+      }
+
+      .cadeau-left {
+        padding-right: 1em;
+      }
+      .cadeau-right {
+        padding-left: 1em;
+
+        .info {
+          margin: 0;
+          position: absolute;
+          top: 21%;
+          right: 17%;
+        }
+
+        .green-block {
+          padding: 0.25em 1em 0.25em 0em;
+          text-align: end;
+          position: absolute;
+          bottom: 16%;
+          left: 11%;
+        }
+      }
+    }
+  }
+}
+
+/**
+* DESKTOP
+*/
+@media screen and (min-width: 1500px) {
+  .mid {
+    .container {
+      .cadeau-right {
+        .green-block {
+          clip-path: polygon(100% 0%, 100% 100%, 13% 100%, 13% 55%, 0 55%, 0 0);
+          max-width: 68%;
+        }
+      }
+    }
+  }
+}
+
+/**
+* RETINA
+*/

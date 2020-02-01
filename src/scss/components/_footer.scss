@@ -6,9 +6,14 @@ footer {
 
     .left,
     .right {
+      align-items: center;
       background-color: #e5e5e5;
+      display: flex;
+      justify-content: center;
+
       a {
         color: #333333;
+        display: flex;
         font-weight: bold;
       }
     }
@@ -25,8 +30,35 @@ footer {
       color: #666666;
       display: block;
       font-family: Lato;
-      padding: 1em;
+      padding: 1.3em;
       width: 100%;
+    }
+  }
+}
+
+/**
+* IPAD PRO
+*/
+@media screen and (min-width: 1024px) {
+  footer {
+    align-items: flex-end;
+    background-image: url(/assets/images/footer-foret.png);
+    background-position: bottom;
+    display: flex;
+    min-height: 152px;
+
+    nav {
+      flex-direction: row;
+
+      .center {
+        flex: auto;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
+      }
     }
   }
 }
