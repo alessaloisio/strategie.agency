@@ -1,0 +1,111 @@
+.mid {
+  padding-top: 64px;
+
+  .cadeau-left {
+    .title {
+      color: #304180;
+      font-family: "CaslonAntique";
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 66px;
+      margin-bottom: 64px;
+    }
+
+    .line {
+      width: 127px;
+      height: 2px;
+      background-color: #edd6ae;
+      display: block;
+      margin-bottom: 46px;
+    }
+
+    p {
+      color: #706062;
+      font-family: "ACaslonPro";
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 38px;
+      margin-bottom: 36px;
+    }
+  }
+
+  .cadeau-right {
+    position: relative;
+
+    .cadeau-bg {
+      width: 100%;
+    }
+
+    .info {
+      margin-bottom: 2em;
+      margin-top: -3em;
+
+      // position: absolute;
+      // top: 21%;
+      // right: 17.5%;
+
+      .info-container {
+        position: relative;
+        background: url(/assets/images/mid-bandeau-rectangle.svg) no-repeat;
+        background-size: 100% 100%;
+
+        .info-text {
+          color: #ffffff;
+          font-family: "CaslonAntique";
+          font-size: 32px;
+          font-weight: 700;
+          padding: 0.75em 2em 0.5em 1.5em;
+          letter-spacing: 0.47px;
+          text-align: center;
+          text-transform: uppercase;
+          transform: rotate(-2deg);
+        }
+
+        .info-bubble {
+          position: absolute;
+          top: -6px;
+          right: -6px;
+
+          color: #ffffff;
+          font-family: "CaslonAntique";
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 52.86px;
+
+          width: 53px;
+          height: 48px;
+          background-color: #889ade;
+          background-image: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.29) 0%,
+            rgba(0, 0, 0, 0.29) 100%
+          );
+          border-radius: 100%;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .green-block {
+      background-color: #7da658;
+      color: #ffffff;
+      font-family: "ACaslonPro";
+      font-size: 1.5em;
+      font-weight: 400;
+      padding: 1em;
+      line-height: 1.5em;
+      text-align: center;
+
+      // padding: 0.25em 1em 0.25em 0em;
+      // clip-path: polygon(100% 0%, 100% 100%, 13% 100%, 13% 55%, 0 55%, 0 0);
+      // text-align: end;
+      // max-width: 60%;
+      // position: absolute;
+      // bottom: 18%;
+      // left: 8%;
+    }
+  }
+}

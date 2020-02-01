@@ -1,0 +1,32 @@
+#qcm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+
+  .container {
+    margin: 0 auto 3em auto;
+  }
+
+  [id^="step-"] {
+    display: none;
+    flex-direction: column;
+  }
+
+  .title {
+    color: #000;
+    font-family: "CaslonAntique";
+    font-size: 2em;
+    font-weight: 400;
+    line-height: 1.5em;
+    text-align: center;
+    margin: 0px auto 65px auto;
+
+    // font-size: 2.5vw;
+    // max-width: 37vw;
+    // line-height: 2.5vw;
+  }
+}
+
+@import "./qcm-step1";
+@import "./qcm-step2";
+@import "./qcm-final";

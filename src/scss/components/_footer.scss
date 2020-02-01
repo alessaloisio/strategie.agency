@@ -1,0 +1,32 @@
+footer {
+  nav {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+
+    .left,
+    .right {
+      background-color: #e5e5e5;
+      a {
+        color: #333333;
+        font-weight: bold;
+      }
+    }
+
+    .left img {
+      margin-right: 1em;
+    }
+    .right img {
+      margin-left: 1em;
+    }
+
+    a {
+      border: none;
+      color: #666666;
+      display: block;
+      font-family: Lato;
+      padding: 1em;
+      width: 100%;
+    }
+  }
+}

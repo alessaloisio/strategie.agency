@@ -1,0 +1,34 @@
+// *********
+// * Created by Alessandro Aloisio <https://aloisio.work>
+// * 01/02/2019
+// *********
+
+@import "./reset";
+@import "./fonts";
+
+:root {
+  --main-color: #304180;
+  --second-color: #283569;
+  --third-color: #7da658;
+
+  --color-text-footer: #666;
+}
+
+html,
+body {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #fff;
+  font-size: 1em;
+}
+
+@import "./shared";
+
+@import "./components/header";
+@import "./components/mid";
+@import "./components/qcm";
+@import "./components/footer";

@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+
+// ACaslonPro
+@font-face {
+  font-family: "ACaslonPro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/ACaslonPro/ACaslonPro-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "ACaslonPro";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/ACaslonPro/ACaslonPro-Italic.otf") format("opentype");
+}
+@font-face {
+  font-family: "ACaslonPro";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/ACaslonPro/ACaslonPro-Bold.otf") format("opentype");
+}
+@font-face {
+  font-family: "ACaslonPro";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/fonts/ACaslonPro/ACaslonPro-BoldItalic.otf")
+    format("opentype");
+}
+
+// CaslonAntique
+@font-face {
+  font-family: "CaslonAntique";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/CaslonAntique/CaslonAntique.ttf") format("truetype");
+}
+@font-face {
+  font-family: "CaslonAntique";
+  font-style: italic;
+  font-weight: 400;
+  src: url("/assets/fonts/CaslonAntique/CaslonAntique-Italic.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "CaslonAntique";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/CaslonAntique/CaslonAntique-Bold.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "CaslonAntique";
+  font-style: italic;
+  font-weight: 700;
+  src: url("/assets/fonts/CaslonAntique/CaslonAntique-BoldItalic.ttf")
+    format("truetype");
+}

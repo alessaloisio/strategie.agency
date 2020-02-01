@@ -1,0 +1,24 @@
+{
+  "name": "strategie.agency",
+  "version": "1.0.0",
+  "description": "Test Strategie.agency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d public/assets/js",
+    "build:watch": "babel src -wd public/assets/js",
+    "css": "node-sass --include-path src/scss src/scss -o public/assets/css",
+    "css:watch": "npm run css && node-sass src/scss -wo public/assets/css"
+  },
+  "keywords": [
+    "Carlsbourg",
+    "concours"
+  ],
+  "author": "Aloisio Alessandro",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "node-sass": "^4.13.1"
+  }
+}
