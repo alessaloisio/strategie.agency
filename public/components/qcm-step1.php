@@ -5,23 +5,23 @@
 
   <div class="propositions">
     <label class="radio">1985
-      <input type="radio" name="answer">
+      <input type="radio" name="answer" value="1">
       <div class="prop-img inner-border">
-        <img src="https://picsum.photos/300/200" alt="Proposition 3">
+        <img src="https://picsum.photos/id/1001/300/200" alt="Proposition 3">
       </div>
     </label>
 
     <label class="radio">1995
-      <input type="radio" name="answer">
+      <input type="radio" name="answer" value="2">
       <div class="prop-img inner-border">
-        <img src="https://picsum.photos/300/200" alt="Proposition 3">
+        <img src="https://picsum.photos/id/1001/300/200" alt="Proposition 3">
       </div>
     </label>
 
     <label class="radio">1998
-      <input type="radio" name="answer">
+      <input type="radio" name="answer" value="3">
       <div class="prop-img inner-border">
-        <img src="https://picsum.photos/300/200" alt="Proposition 3">
+        <img src="https://picsum.photos/id/1001/300/200" alt="Proposition 3">
       </div>
     </label>
   </div>

@@ -2,7 +2,7 @@
   .propositions {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 85px;
+    margin-bottom: 70px;
 
     .radio {
       cursor: pointer;
@@ -11,7 +11,8 @@
       flex-direction: column-reverse;
       font-family: "ACaslonPro";
       font-size: 1em;
-      margin-bottom: 2em;
+      margin: 0 auto 2em auto;
+      max-width: 285px;
       position: relative;
       -webkit-user-select: none;
       -moz-user-select: none;
@@ -22,6 +23,10 @@
 
       &:last-child {
         margin-bottom: 0;
+      }
+
+      * {
+        pointer-events: none;
       }
 
       input {
@@ -45,7 +50,7 @@
       }
 
       input:checked ~ .inner-border:after {
-        border-color: rgba(125, 166, 88, 0.57);
+        border-color: rgba(0, 0, 0, 0.57);
       }
     }
   }
@@ -56,6 +61,41 @@
     font-size: 1.25em;
     font-weight: 400;
     line-height: 1.25em;
+    margin: 0 auto;
+    max-width: 378px;
     text-align: center;
+  }
+}
+
+/**
+* Tablet
+*/
+@media screen and (min-width: 768px) {
+  #qcm {
+    .propositions {
+      flex-wrap: nowrap;
+
+      .radio {
+        margin-bottom: 0;
+        padding: 0 0.5em;
+      }
+    }
+  }
+}
+
+/**
+* Laptop
+*/
+@media screen and (min-width: 1024px) {
+  #qcm {
+    #step-1 {
+      margin: 0 auto;
+      max-width: 920px;
+
+      .title {
+        font-size: 2.5em;
+        max-width: 675px;
+      }
+    }
   }
 }

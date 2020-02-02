@@ -105,16 +105,14 @@
   .mid {
     .container {
       flex-direction: row;
-
-      .cadeau-left,
-      .cadeau-right {
-        flex-basis: 50%;
-      }
+      justify-content: flex-end;
 
       .cadeau-left {
+        flex-basis: 40%;
         padding-right: 1em;
       }
       .cadeau-right {
+        flex-basis: 50%;
         padding-left: 1em;
 
         .info {

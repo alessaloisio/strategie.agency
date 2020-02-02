@@ -7,7 +7,7 @@
       <p>Que ce soit au shaker ou à la cuillère, vous allez devenir un vrai barman !</p>
     </div>
     <div class="cadeau-right">
-      <img class="cadeau-bg" src="/assets/images/mid-bg-2.png" alt="">
+      <img class="cadeau-bg" src="/assets/images/mid-bg.png" alt="">
       <div class="info">
         <div class="info-container">
           <p class="info-text">A gagner</p>

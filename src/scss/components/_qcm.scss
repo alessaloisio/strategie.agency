@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 90px;
+  position: relative;
 
   .container {
     margin: 0 auto 3em auto;
@@ -20,10 +21,24 @@
     line-height: 1.5em;
     text-align: center;
     margin: 0px auto 65px auto;
+  }
+}
 
-    // font-size: 2.5vw;
-    // max-width: 37vw;
-    // line-height: 2.5vw;
+/**
+* Laptop
+*/
+@media screen and (min-width: 1024px) {
+  #qcm {
+    &::after {
+      background-image: url(/assets/images/footer-deco1.png);
+      background-repeat: no-repeat;
+      content: "";
+      width: 221px;
+      height: 125px;
+      position: absolute;
+      bottom: 0;
+      right: 2em;
+    }
   }
 }
 

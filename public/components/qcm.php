@@ -1,6 +1,6 @@
 <div id="qcm">
   <div class="container">
-    <form action="" method="post">
+    <form id="qcmForm" name="qcmForm" action="/validate.php" method="post">
       <?php include("./components/qcm-step1.php"); ?>
       <?php include("./components/qcm-step2.php"); ?>
     </form>

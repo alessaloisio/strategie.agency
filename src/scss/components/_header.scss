@@ -31,11 +31,13 @@ header {
 
       a {
         background-color: #fff;
+        border: none;
         color: #090809;
         font-family: Lato;
         font-weight: bold;
         margin-left: 1em;
-        padding: 1em;
+        margin-right: 1em;
+        padding: 0.75em;
         text-decoration: none;
         text-transform: lowercase;
       }
