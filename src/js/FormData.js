@@ -1,9 +1,9 @@
 export default class FormData {
   constructor(form) {
     this.form = form;
-
     this.data = {};
     this.errors = {};
+    this.submit = false;
 
     // INIT FORM
     this.getAll();
@@ -31,17 +31,28 @@ export default class FormData {
   }
 
   request(action, method = "GET") {
-    if (!Object.keys(this.errors).length)
-      fetch(action, {
-        method: method,
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(this.data)
-      })
-        .then(response => response.json())
-        .then(response => {
-          console.log(response);
-        });
+    return new Promise(resolve => {
+      if (!Object.keys(this.errors).length)
+        fetch(action, {
+          method: method,
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(this.data)
+        })
+          .then(response => response.json())
+          .then(response => {
+            if (response.type === "error") {
+              console.log(response);
+              if (response.message) {
+              } else if (response.data) {
+              }
+            } else {
+              this.submit = true;
+            }
+
+            resolve(true);
+          });
+    });
   }
 }
