@@ -130,6 +130,11 @@ table {
 html {
   box-sizing: border-box;
 }
+
+input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
+
 *,
 *:before,
 *:after {

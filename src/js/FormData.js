@@ -4,6 +4,9 @@ export default class FormData {
 
     this.data = {};
     this.errors = {};
+
+    // INIT FORM
+    this.getAll();
   }
 
   getAll() {
@@ -21,5 +24,21 @@ export default class FormData {
     });
 
     return [this.data, this.errors];
+  }
+
+  request(action, method = "GET") {
+    if (!Object.keys(this.errors).length)
+      fetch(action, {
+        method: method,
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(this.data)
+      })
+        // .then(response => response.json())
+        .then(response => response.text())
+        .then(response => {
+          console.log(response);
+        });
   }
 }

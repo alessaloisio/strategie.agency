@@ -38,21 +38,8 @@ import FormData from "./FormData";
 
     // Create a object with all fields data
     const FD = new FormData(form);
-    const [data, errors] = FD.getAll();
+    FD.request("/validate.php", "POST");
 
-    // Request
-    if (!Object.keys(errors).length)
-      fetch("/validate.php", {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-      })
-        // .then(response => response.json())
-        .then(response => response.text())
-        .then(response => {
-          console.log(response);
-        });
+    // manage errors
   });
 })();
