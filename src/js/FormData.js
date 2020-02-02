@@ -39,8 +39,7 @@ export default class FormData {
         },
         body: JSON.stringify(this.data)
       })
-        // .then(response => response.json())
-        .then(response => response.text())
+        .then(response => response.json())
         .then(response => {
           console.log(response);
         });
