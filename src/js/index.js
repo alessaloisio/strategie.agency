@@ -36,6 +36,8 @@ import FormData from "./FormData";
   form.addEventListener("submit", e => {
     e.preventDefault();
 
+    // Clean errors messages
+
     // Create a object with all fields data
     const FD = new FormData(form);
     FD.request("/validate.php", "POST").then(() => {

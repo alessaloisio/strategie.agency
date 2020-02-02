@@ -5,6 +5,8 @@ export default class FormData {
     this.errors = {};
     this.submit = false;
 
+    this.idErrorBlock = "error-message";
+
     // INIT FORM
     this.getAll();
   }
@@ -45,6 +47,8 @@ export default class FormData {
             if (response.type === "error") {
               console.log(response);
               if (response.message) {
+                document.getElementById(this.idErrorBlock).innerText =
+                  response.message;
               } else if (response.data) {
               }
             } else {

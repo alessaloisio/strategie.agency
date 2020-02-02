@@ -3,6 +3,8 @@
     Entrez vos informations pour valider votre <span class="btn-primary">participation</span>
   </div>
 
+  <div id="error-message"></div>
+
   <div class="columns">
     <div class="input tablet-50">
       <label for="lastname">Nom <span class="required">*</span>:</label>
