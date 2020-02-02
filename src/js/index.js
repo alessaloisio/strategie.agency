@@ -20,7 +20,7 @@ import FormData from "./FormData";
   steps.inc();
 
   /***
-   * Event Click Radio on Step1 => currentStep = 2 => switchStep
+   * On Radio Click sitch to Step 2
    */
   Array.from(document.querySelectorAll("#step-1 .radio")).map(radio => {
     radio.addEventListener("click", e => {
@@ -49,7 +49,8 @@ import FormData from "./FormData";
         },
         body: JSON.stringify(data)
       })
-        .then(response => response.json())
+        // .then(response => response.json())
+        .then(response => response.text())
         .then(response => {
           console.log(response);
         });
