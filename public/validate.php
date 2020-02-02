@@ -6,6 +6,7 @@
 
   if($_SERVER['REQUEST_METHOD'] === "POST") {
 
+    // Hack get ($_POST) from FETCH(.js)  
     header('Content-Type: application/json');
     $data = json_decode(file_get_contents("php://input"));
     
@@ -20,16 +21,16 @@
       $onlyStr = "([a-zA-z-]+)";
       $validationField = [
         "answer" => ["required"],
+        "email" => ["required", "[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})"],
         "firstname" => ["required", $onlyStr],
         "lastname" => ["required", $onlyStr],
-        "email" => ["required", "[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})"],
         "phone" => [],
-        "address" => [],
-        "number" => ["required"],
-        "cp" => [],
+        "address_line1" => [],
+        "address_line2" => [],
+        "postal_code" => [],
         "city" => [],
         "accept" => [],
-        "estimation" => [],
+        "estimation" => []
       ];
 
       $tmp = new Validator($data, $validationField);
@@ -39,10 +40,18 @@
         die();
       }
 
-      // else save on database
+      // Save on database
+      $sql = "INSERT INTO carlsbourg (".join(",", array_keys($tmp->data)).") VALUES (".join(",", array_fill(0, count($tmp->data), '?')).")";
+      $stmt = $pdo->prepare($sql);
 
-      echo json_encode(array("type" => "success", "message" => "Participation enregistrée."));
-      echo json_encode(array("type" => "error", "message" => "Problème lors de la participation."));
+      try {
+        $stmt->execute(array_values($tmp->data));
+        echo json_encode(array("type" => "success", "message" => "Participation enregistrée."));
+      } catch(Exception $e) {
+        // var_dump($e->getMessage());
+        echo json_encode(array("type" => "error", "message" => "Problème lors de la participation."));
+      }
+      
       die();
     }
     

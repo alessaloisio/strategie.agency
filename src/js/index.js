@@ -38,6 +38,7 @@ import FormData from "./FormData";
 
     // Create a object with all fields data
     const FD = new FormData(form);
+    console.log(FD.data);
     FD.request("/validate.php", "POST");
 
     // manage errors

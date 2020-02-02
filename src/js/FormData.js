@@ -10,12 +10,16 @@ export default class FormData {
   }
 
   getAll() {
+    // console.log(Array.from(this.form.querySelectorAll("input")));
     Array.from(this.form.querySelectorAll("input")).map(input => {
-      const { name, value, required, checked } = input;
+      const { name, type, value, required, checked } = input;
 
       // Manage Required Input
       if (required && value.length === 0)
         return (errors[name] = "Remplissez ce champ");
+
+      // Manage Checkbox
+      if (type === "checkbox") return (this.data[name] = checked);
 
       // Manage Radio get checked field
       if (this.data[name] && !checked) return;

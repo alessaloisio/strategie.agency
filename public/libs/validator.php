@@ -12,6 +12,8 @@ class Validator {
 
     $this->secureData();
     $this->fieldVerify();
+
+    $this->sortDataForSQL();
   }
 
   private function secureData() {
@@ -35,6 +37,19 @@ class Validator {
         }
       }
     }
+  }
+
+  private function sortDataForSQL() {
+    $tmp = [];
+
+    foreach ($this->fields as $key => $value) {
+
+      if(isset($this->data[$key]) && !empty($this->data[$key])) {
+        $tmp[$key] = $this->data[$key];
+      }
+    }
+
+    $this->data = $tmp;
   }
 }
 ?>

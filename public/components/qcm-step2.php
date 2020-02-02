@@ -29,20 +29,20 @@
 
   <div class="columns">
     <div class="input tablet-75">
-      <label for="address">Adresse:</label>
-      <input type="text" name="address" id="address">
+      <label for="address_line1">Adresse:</label>
+      <input type="text" name="address_line1" id="address_line1">
     </div>
 
     <div class="input tablet-25">
-      <label for="number">N°:</label>
-      <input type="text" name="number" id="number">
+      <label for="address_line2">N°:</label>
+      <input type="text" name="address_line2" id="address_line2">
     </div>
   </div>
 
   <div class="columns">
     <div class="input tablet-50">
-      <label for="cp">CP:</label>
-      <input type="text" name="cp" id="cp">
+      <label for="postal_code">CP:</label>
+      <input type="text" name="postal_code" id="postal_code">
     </div>
 
     <div class="input tablet-50">
