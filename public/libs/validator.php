@@ -6,7 +6,7 @@
 
 class Validator {
   public function __construct(Object $data = NULL, Array $fields) {
-    $this->data = get_object_vars($data);
+    $this->data = $data;
     $this->fields = $fields;
     $this->errors = [];
 

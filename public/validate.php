@@ -8,7 +8,7 @@
 
     // Hack get ($_POST) from FETCH(.js)  
     header('Content-Type: application/json');
-    $data = json_decode(file_get_contents("php://input"));
+    $data = json_decode(file_get_contents("php://input"), true);
     
     if(count((array)$data)) {
 
@@ -19,6 +19,7 @@
        * START VALIDATE FIELDS
        */
       $onlyStr = "([a-zA-z-]+)";
+      // ! disposition of each field is important for the Insert order
       $validationField = [
         "answer" => ["required"],
         "email" => ["required", "[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})"],

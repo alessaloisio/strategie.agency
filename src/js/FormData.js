@@ -58,8 +58,6 @@ export default class FormData {
         .then(response => response.json())
         .then(response => {
           if (response.type === "error") {
-            console.log(response);
-
             if (response.message) {
               // Error with the database (multi-participation)
               document.getElementById(this.idErrorBlock).innerText =
